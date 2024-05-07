@@ -8,14 +8,44 @@ namespace git練習
 {
     internal class LoginFunction
     {
-        public void Login(User user)
+        public (bool, string) Login(User user)
         {
-            return;
+            if (!Verify(user))
+                return (false, "登入失敗");
+            return (true, "登入成功");
+
+        }
+
+        public (bool, string) Login(string email, string password, string name)
+        {
+            User user = new User();
+            user.email = email;
+            user.name = name;
+            user.password = password;
+            if (!Verify(user))
+                return (false, "登入失敗");
+            return (true, "登入成功");
+
         }
 
         public void Logout()
         {
             return;
+        }
+
+        public bool Verify(User user)
+        {
+            string id = user.id;
+            string email = user.email;
+            if (string.IsNullOrEmpty(id))
+            {
+                return false;
+            }
+            if (!email.Contains("@"))
+            {
+                return false;
+            }
+            return true;
         }
 
        
