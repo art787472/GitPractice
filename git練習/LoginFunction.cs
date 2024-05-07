@@ -13,7 +13,10 @@ namespace git練習
             return;
         }
 
-        
+        public void Logout()
+        {
+            return;
+        }
 
        
     }
