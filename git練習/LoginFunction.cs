@@ -8,5 +8,13 @@ namespace git練習
 {
     internal class LoginFunction
     {
+        public void Login(User user)
+        {
+            return;
+        }
+
+        
+
+       
     }
 }
