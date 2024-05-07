@@ -17,6 +17,13 @@ namespace git練習
                 Console.Write("登入成功");
             else 
                 Console.WriteLine("登入失敗");
+
+            LoginFunction loginFunction = new LoginFunction();
+            var (isLoginSuccess, loginMessage) = loginFunction.Login("leo604leo604@gmail.com", "abc1234", "Leo");
+            Console.WriteLine(loginMessage);
+
+            loginFunction.Logout();
+
             Console.ReadKey();
         }
     }
