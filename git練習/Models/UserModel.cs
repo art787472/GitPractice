@@ -9,6 +9,11 @@ namespace git練習.Models
         public String Password { get; set; }
         public int Age { get; set; }
 
+        public UserModel()
+        {
+            
+        }
+
         public UserModel(string userName, string account, string password, int age)
         {
             UserName = userName;
