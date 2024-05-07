@@ -30,6 +30,7 @@ namespace git練習
 
         public void Logout()
         {
+            Console.WriteLine("登出");
             return;
         }
 
