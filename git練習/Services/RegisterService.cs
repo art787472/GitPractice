@@ -22,6 +22,10 @@ namespace git練習.Services
 
         private bool CheckAccountExist(string Account)
         {
+            if (Account == "leo604leo604@gmail.com")
+                return false;
+            
+            
             return true;
         }
     }
