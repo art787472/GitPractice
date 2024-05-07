@@ -18,6 +18,21 @@ namespace git練習
             return;
         }
 
+        public bool Verify(User user)
+        {
+            string id = user.id;
+            string email = user.email;
+            if (string.IsNullOrEmpty(id))
+            {
+                return false;
+            }
+            if (!email.Contains("@"))
+            {
+                return false;
+            }
+            return true;
+        }
+
        
     }
 }
