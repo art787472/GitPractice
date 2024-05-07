@@ -8,9 +8,12 @@ namespace git練習
 {
     internal class LoginFunction
     {
-        public void Login(User user)
+        public (bool, string) Login(User user)
         {
-            return;
+            if (!Verify(user))
+                return (false, "登入失敗");
+            return (true, "登入成功");
+
         }
 
         public void Logout()
