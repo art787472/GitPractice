@@ -16,6 +16,18 @@ namespace git練習
 
         }
 
+        public (bool, string) Login(string email, string password, string name)
+        {
+            User user = new User();
+            user.email = email;
+            user.name = name;
+            user.password = password;
+            if (!Verify(user))
+                return (false, "登入失敗");
+            return (true, "登入成功");
+
+        }
+
         public void Logout()
         {
             return;
