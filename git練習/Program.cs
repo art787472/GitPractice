@@ -23,6 +23,10 @@ namespace git練習
            
             LoginFunction loginFunction = new LoginFunction();
             var (isLoginSuccess, loginMessage) = loginFunction.Login(account, password, userName);
+            if(!isLoginSuccess)
+            {
+                loginFunction.SendConfirmationMail();
+            }
             Console.WriteLine(loginMessage);
 
             loginFunction.Logout();
