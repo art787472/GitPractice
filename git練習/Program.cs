@@ -12,11 +12,21 @@ namespace git練習
         static void Main(string[] args)
         {
             RegisterService service = new RegisterService();
-            bool isSuccess = service.Register(Console.ReadLine(), Console.ReadLine(), Console.ReadLine());
+            string account = Console.ReadLine();
+            string password = Console.ReadLine();
+            string userName = Console.ReadLine();
+            bool isSuccess = service.Register(account, password, userName);
             if (!isSuccess)
             {
                 Console.Write("登入成功!!");
             }
+           
+            LoginFunction loginFunction = new LoginFunction();
+            var (isLoginSuccess, loginMessage) = loginFunction.Login(account, password, userName);
+            Console.WriteLine(loginMessage);
+
+            loginFunction.Logout();
+
             Console.ReadKey();
         }
     }

@@ -42,11 +42,16 @@ namespace git練習
             {
                 return false;
             }
-            if (!email.Contains("@"))
+            if (!VerifyEmail(email))
             {
                 return false;
             }
             return true;
+        }
+
+        private bool VerifyEmail(string email)
+        {
+            return email.Contains("@");
         }
 
        
