@@ -54,6 +54,10 @@ namespace git練習
             return email.Contains("@");
         }
 
+        public void SendConfirmationMail()
+        {
+            return;
+        }
        
     }
 }
